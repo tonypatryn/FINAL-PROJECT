@@ -1,0 +1,94 @@
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+    -moz-box-sizing: border-box; /* Firexfox */
+    -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+    box-sizing: border-box; /* IE */
+    margin: 0;
+ 	padding: 0;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
+/*font-family: 'Archivo Narrow', sans-serif;
+font-family: 'Coming Soon', cursive;
+font-family: 'Roboto', sans-serif;*/
+
+/******************************************
+/* BODY
+/*******************************************/
+
+nav {
+	float: right;
+}
+
+header {
+	background-color: rgb(0,0,0);
+	width: 100%;
+	height: 90px;
+}
+
+#getStarted {
+	margin: auto;
+	display: block;
+	width: 30%
+	padding: 50 0 0 0;
+}
+
+#getStarted a {
+	background-color: orange;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	padding: 9px 25px;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	font-family: 'Archivo Narrow', Impact, sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+#getStarted a:hover {
+	background-color: red;
+}
+
+#logo {
+	width: 150px;
+	float: left;
+	margin: 10px 10px 10px 40px;
+	clear: both;
+}
+
+.nav-links {
+	float: left;
+	padding: 20px 40px 10px 0px;
+	margin: 0px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+#hero {
+	background-image: url('../images/hero-bg.jpg');
+	background-color: #000000;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	clear: both;
+}
