@@ -44,6 +44,7 @@ footer {
 	width: 100%;
 	height: 130px;
 	clear: both;
+	border-top: 5px solid red;
 }
 
 #getStarted {
@@ -51,7 +52,7 @@ footer {
 	display: block;
 	width: 200px;
 	clear: both;
-	padding-top: 210px;
+	padding-top: 100px;
 }
 
 #getStarted a {
@@ -100,18 +101,25 @@ footer {
 	margin: 20px;
 	display: inline-block;
 	float: left;
+	width: 30%;
 }
 
 .splat2 {
 	margin: 20px;
 	display: inline-block;
 	float: left;
+	width: 30%;
 }
 
 .splat3 {
 	margin: 20px;
 	display: inline-block;
 	float: right;
+	width: 30%;
+}
+
+.inkBlot {
+	padding-bottom: 5px;
 }
 
 #hero {
@@ -132,7 +140,7 @@ footer {
 }
 
 p {
-	padding: 0px 40px;
+	padding: 0px 40px 15px 40px;
 	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 18px;
 	line-height: 26px;
@@ -152,6 +160,17 @@ p {
 	margin: auto;
 }
 
+h1 {
+	padding: 0px 40px;
+	font-family: 'Fjalla One', Impact, sans-serif;
+	font-size: 36px;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	margin: 0px;
+	padding: 100px 0px 0px 0px;
+}
+
 h2 {
 	padding: 0px 40px;
 	font-family: 'Fjalla One', Impact, sans-serif;
@@ -161,4 +180,94 @@ h2 {
 	text-align: center;
 	margin: 0px;
 	padding: 30px 0px 15px 0px;
+}
+
+#getStartedSecondTime {
+	margin: auto;
+	margin-bottom: 30px;
+	padding-top: 20px;
+	display: block;
+	width: 200px;
+	clear: both;
+	padding: 20px, 0px, 100px, 0px;
+}
+
+#getStartedSecondTime a {
+	background-color: orange;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	padding: 9px 25px;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	font-family: 'Fjalla One', Impact, sans-serif;
+	font-size: 24px;
+}
+
+.about {
+	margin-bottom: 100px;
+	clear: both;
+}
+
+.aboutContainer {
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.aboutImage {
+	width: 33%;
+	display: inline-block;
+	float: left;
+}
+
+.aboutText {
+	width: 66%;
+	display: inline-block;
+	float: right;
+}
+
+.contentContainer {
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.contentText {
+	text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 300;
+	color: #888888;
+	padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: orange;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	font-family: 'Fjalla One', Impact, sans-serif;
+	font-size: 24px;
+}
+
+input[type=submit]:hover {
+    background-color: red;
 }
