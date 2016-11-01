@@ -98,27 +98,37 @@ footer {
 }
 
 .splat1 {
-	margin: 20px;
+	padding: 0px 10px 10px 40px;
 	display: inline-block;
 	float: left;
-	width: 30%;
+	width: 33.33%;
+}
+
+.inputCorpseBoxes {
+	padding: 0px 40px 0px 40px;
 }
 
 .splat2 {
-	margin: 20px;
+	padding: 0px 10px 10px 10px;
 	display: inline-block;
 	float: left;
-	width: 30%;
+	width: 33.33%;
 }
 
 .splat3 {
-	margin: 20px;
+	padding: 0px 40px 10px 10px;
 	display: inline-block;
 	float: right;
-	width: 30%;
+	width: 33.33%;
 }
 
 .inkBlot {
+	padding-bottom: 5px;
+}
+
+.inkBlotButton3,
+.inkBlotButton4,
+.inkBlotButton5 {
 	padding-bottom: 5px;
 }
 
@@ -137,10 +147,11 @@ footer {
 #whatIsSection {
 	margin: 0px;
 	text-align: center;
+	padding: 0px 40px 0px 40px;
 }
 
 p {
-	padding: 0px 40px 15px 40px;
+	padding: 0px 0px 15px 0px;
 	font-family: 'Roboto', Arial, sans-serif;
 	font-size: 18px;
 	line-height: 26px;
@@ -281,8 +292,13 @@ input[type=submit]:hover {
 	float: left;
 	background-image: url('../images/pick3-black.png');
 	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 	width: 121px;
 	height: 108px;
+	padding: 0px 10px 10px 40px;
+	display: inline-block;
+	width: 33%;
 }
 
 .pick3:hover {
@@ -294,8 +310,13 @@ input[type=submit]:hover {
 	float: left;
 	background-image: url('../images/pick4-black.png');
 	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 	width: 133px;
 	height: 120px;
+	padding: 0px 10px 10px 10px;
+	display: inline-block;
+	width: 33%;
 }
 
 .pick4:hover {
@@ -304,13 +325,72 @@ input[type=submit]:hover {
 
 .pick5 {
 	margin: auto;
-	float: left;
+	float: right;
 	background-image: url('../images/pick5-black.png');
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-position: center; 	
 	width: 117px;
 	height: 128px;
+	padding: 0px 40px 10px 10px;
+	display: inline-block;
+	width: 33%;
 }
 
 .pick5:hover {
 	background-image: url('../images/pick5-orange.png');
+}
+
+#letsPlay {
+	margin: auto;
+	margin-bottom: 30px;
+	padding-top: 20px;
+	display: block;
+	width: 200px;
+	clear: both;
+	padding: 20px, 0px, 100px, 0px;
+}
+
+#letsPlay a {
+	background-color: orange;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	padding: 9px 25px;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	font-family: 'Fjalla One', Impact, sans-serif;
+	font-size: 24px;
+}
+
+#letsPlay a:hover {
+	background-color: red;
+}
+
+.submitButton {
+	margin: auto;
+	margin-bottom: 30px;
+	padding-top: 20px;
+	display: block;
+	width: 200px;
+	clear: both;
+	padding: 20px, 0px, 100px, 0px;
+}
+
+.submitButton a {
+	background-color: orange;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	padding: 9px 25px;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	font-family: 'Fjalla One', Impact, sans-serif;
+	font-size: 24px;
+}
+
+.submitButton a:hover {
+	background-color: red;
 }
