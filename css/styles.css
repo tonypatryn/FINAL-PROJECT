@@ -368,12 +368,16 @@ input[type=submit]:hover {
 	background-color: red;
 }
 
+.inputCorpseBoxes {
+	display: none;
+}
+
 .submitButton {
 	margin: auto;
 	margin-bottom: 30px;
 	padding-top: 20px;
 	display: block;
-	width: 200px;
+	width: 120px;
 	clear: both;
 	padding: 20px, 0px, 100px, 0px;
 }
@@ -393,4 +397,20 @@ input[type=submit]:hover {
 
 .submitButton a:hover {
 	background-color: red;
+}
+
+.theStoryTitle {
+	margin-top: 20px;
+	font-family: 'Special Elite', Arial, sans-serif;
+	font-size: 60px;
+	color: #34efa5;
+	text-align: center;
+}
+
+.theStory {
+	margin-top: 20px;
+	font-family: 'Special Elite', Arial, sans-serif;
+	font-size: 30px;
+	color: #000000;
+	text-align: center;
 }
