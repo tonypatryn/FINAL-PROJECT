@@ -104,10 +104,6 @@ footer {
 	width: 33.33%;
 }
 
-.inputCorpseBoxes {
-	padding: 0px 40px 0px 40px;
-}
-
 .splat2 {
 	padding: 0px 10px 10px 10px;
 	display: inline-block;
@@ -163,7 +159,8 @@ p {
 #copyright {
 	font-size: 12px;
 	color: #ffffff;
-	clear: both;
+	float: right;
+	padding: 30px 40px 0px 0px;
 }
 
 #howDoesSection {
@@ -220,27 +217,34 @@ h2 {
 	background-color: red;
 }
 
+.clearfix:after {
+   content: " "; 
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
 .about {
-	margin-bottom: 100px;
-	clear: both;
+	padding-bottom: 20px;
 }
 
 .aboutContainer {
 	width: 100%;
 	padding-left: 40px;
 	padding-right: 40px;
+	text-align: center;
 }
 
 .aboutImage {
 	width: 33%;
+	padding-bottom: 20px;
 	display: inline-block;
-	float: left;
 }
 
 .aboutText {
 	width: 66%;
 	display: inline-block;
-	float: right;
 }
 
 .contentContainer {
@@ -413,4 +417,8 @@ input[type=submit]:hover {
 	font-size: 30px;
 	color: #000000;
 	text-align: center;
+}
+
+.corpse-number {
+	width: 100px !important;
 }

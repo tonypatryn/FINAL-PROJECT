@@ -10,7 +10,7 @@ var setLastThree = "";
 $('#letsPlay').on('click', function( playClick ) {
     corpseNumber = $('.corpse-number').val();
     console.log(corpseNumber);
-    $('.inputCorpseBoxes').css('display','initial');
+    $('.inputCorpseBoxes').css('display','block');
     $('#howDoesSection').css('display','none');
     $('.titleOfStory').css('display','none');
     corpseTitle = $('.corpse-title').val();
