@@ -6,10 +6,8 @@ var fullStory = "";
 var getLastThree = "";
 var setLastThree = "";
 
-
 $('#letsPlay').on('click', function( playClick ) {
     corpseNumber = $('.corpse-number').val();
-    console.log(corpseNumber);
     $('.inputCorpseBoxes').css('display','block');
     $('#howDoesSection').css('display','none');
     $('.titleOfStory').css('display','none');
@@ -19,8 +17,6 @@ $('#letsPlay').on('click', function( playClick ) {
 
 $('.submitButton').on('click', function( oneClick ) {
     oneClick.preventDefault();
-    console.log(corpseNumber);
-    console.log(currentCorpse);
     if ( currentCorpse < corpseNumber ) {
         fullStory = fullStory + " " + $('.inputStory').val();
         getLastThree = fullStory.split(" ");
@@ -28,10 +24,21 @@ $('.submitButton').on('click', function( oneClick ) {
         $('.theStory').text(setLastThree);
     } else {
         fullStory = fullStory + " " + $('.inputStory').val();
-        $('.theStory').text(fullStory);
+        $('.theStory').text(fullStory).hide().fadeIn(1000).css('padding-bottom','20px');
         $('.inputStory').css('display','none');
         $('.submitButton').css('display','none');
     }
     $('.inputStory').val('');
     currentCorpse++
 });
+
+$('.aboutImage').hide().fadeIn(1000);
+
+$('.aboutText').hide().delay(400).fadeIn(1000);
+
+
+
+
+
+
+
