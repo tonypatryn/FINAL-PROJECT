@@ -23,11 +23,30 @@
 
 /*font-family: 'Shadows Into Light', cursive;
 font-family: 'Fjalla One', sans-serif;
-font-family: 'Roboto', sans-serif; 100 300 400 500 700 900*/
+font-family: 'Roboto', sans-serif; 100 300 400 500 700 900
+font-family: 'Amatic SC', cursive; */
 
 /******************************************
 /* BODY
 /*******************************************/
+
+
+.parallax {
+    /* The image used */
+    background-image: url('../images/cherhale.com_.jpg');
+    background-color: #000000;
+
+    /* Full height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clear: both;
+    padding-top: 90px;
+}
 
 nav {
 	float: right;
@@ -40,6 +59,8 @@ header {
 	position: fixed;
 	top: 0;
 	padding-bottom: 20px;
+	overflow: hidden;
+	z-index: 100;
 }
 
 footer {
@@ -49,6 +70,7 @@ footer {
 	clear: both;
 	border-top: 5px solid red;
 }
+
 
 #getStarted {
 	margin: auto;
@@ -101,23 +123,19 @@ footer {
 }
 
 .splat1 {
-	padding: 0px 10px 10px 40px;
-	display: inline-block;
 	float: left;
+	padding-right: 10px;
 	width: 33.33%;
 }
 
 .splat2 {
-	padding: 0px 10px 10px 10px;
-	display: inline-block;
 	float: left;
 	width: 33.33%;
 }
 
 .splat3 {
-	padding: 0px 40px 10px 10px;
-	display: inline-block;
 	float: right;
+	padding-left: 10px;
 	width: 33.33%;
 }
 
@@ -132,34 +150,6 @@ footer {
 	padding-bottom: 5px;
 }
 
-/*#hero {
-	background-image: url('../images/hero-bg.jpg');	
-    background: transparent;
-	width: 100%;
-    min-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	clear: both;
-	margin: 0px;
-}*/
-
-.parallax {
-    /* The image used */
-    background-image: url('../images/cherhale.com_.jpg');
-
-    /* Full height */
-    height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    clear: both;
-    padding-top: 90px;
-}
 
 #whatIsSection {
 	margin: 0px;
@@ -187,6 +177,7 @@ p {
 #howDoesSection {
 	text-align: center;
 	margin: auto;
+	padding: 0px 40px 0px 40px;
 }
 
 h1 {
@@ -247,13 +238,11 @@ h2 {
 }
 
 .about {
-	padding-bottom: 80px;
 	padding-top: 90px;
 }
 
 .aboutContainer {
 	width: 100%;
-	height: 100%;
 	padding-left: 40px;
 	padding-right: 40px;
 	text-align: center;
@@ -429,18 +418,26 @@ input[type=submit]:hover {
 
 .theStoryTitle {
 	margin-top: 20px;
-	font-family: 'Shadows Into Light', cursive;
+	font-family: 'Amatic SC', cursive;
 	font-size: 60px;
-	color: #34efa5;
+	color: #000000;
 	text-align: center;
 }
 
 .theStory {
-	margin-top: 20px;
+	margin-top: 40px;
 	font-family: 'Shadows Into Light', cursive;
 	font-size: 30px;
 	color: #000000;
 	text-align: center;
+}
+
+.theStory p {
+	padding-bottom: 20px;
+	font-family: 'Shadows Into Light', cursive;
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 30px;
+	color: #000000;	
 }
 
 .corpse-number {
@@ -458,6 +455,39 @@ input[type=submit]:hover {
   display: none;
 }
 
+.hamburger span {
+  display: block;
+  width: 30px;
+  height:3px;
+  background-color: #ffffff;
+  margin:2px 0;
+}
+
+.theMap {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.scrolloff{
+	pointer-events: none;
+}
+
+.paperOn {
+	width: 700px;
+	margin: auto;
+	margin-top: 20px;
+	background-image: url("../images/Wrinkled-Lined-Paper-Texture.jpg");
+/*	background-attachment: fixed;
+*/    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-color: #E3F2FF;
+	padding: 15px;
+	box-shadow: 0px 7px 15px #888888;
+}
+
+/* MOBILE */
 @media only screen and (max-width: 604px) {
   	.hamburger {
     	display: inline-block;
@@ -466,6 +496,9 @@ input[type=submit]:hover {
 		margin: 0px;
 		float: none;
 		display: block;
+	}
+	header {
+		height: 90px;
 	}
 	ul, li, .nav-links {
 		float: none;
@@ -482,13 +515,24 @@ input[type=submit]:hover {
 	.nav-links {
 		padding-left: 0px;
 	}
+	.splat1, .splat2, .splat3 {
+		float: none;
+		display: inline-block;
+		text-align: center;
+		width: 100%;
+		padding: 0px;
+	}
+	#copyright {
+		float: none;
+		padding: 0px 0px 0px 40px;
+	}
+
 }
 
-.hamburger span {
-  display: block;
-  width: 30px;
-  height:3px;
-  background-color: #ffffff;
-  margin:2px 0;
-}
+/* MOBILE for PAPER */
+@media only screen and (max-width: 780px) {
+	.paperOn {
+		width: 100%;
+	}
 
+}
