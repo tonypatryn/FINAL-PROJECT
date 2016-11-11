@@ -9,13 +9,24 @@ var navStatus = false;
 
 //CREATE THE CORPSE
 $('#letsPlay').on('click', function( playClick ) {
-    corpseNumber = $('.corpse-number').val();
-    $('.inputCorpseBoxes').css('display','block');
-    $('#howDoesSection').css('display','none');
-    $('.titleOfStory').css('display','none');
-    corpseTitle = $('.corpse-title').val();
-    $('.theStoryTitle').text(corpseTitle);
+
+    if ( $.isNumeric($('.corpse-number').val()) ) {
+        $('input').removeClass('errorInput');
+        corpseNumber = $('.corpse-number').val();
+        $('.inputCorpseBoxes').css('display','block');
+        $('#howDoesSection').css('display','none');
+        $('.titleOfStory').css('display','none');
+        corpseTitle = $('.corpse-title').val();
+        $('.theStoryTitle').text(corpseTitle);
+        console.log('This worked!!');    
+    } else {
+        $('input').addClass('errorInput');
+        alert('Please use a number for Players!');
+    }    
 });
+
+//IS CORPSE A NUMBER
+
 
 //SUBMIT THE CORPSE
 $('.submitButton').on('click', function( oneClick ) {
@@ -74,7 +85,3 @@ $('#gMaps').on('click', function () {
 $(".theMap").mouseleave(function () {
     $('.theMap').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
 });
-
-
-
-
