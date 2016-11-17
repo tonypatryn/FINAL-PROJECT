@@ -6,36 +6,49 @@ var fullStory = "";
 var getLastThree = "";
 var setLastThree = "";
 var navStatus = false;
+var checkForThree = "";
 
 //CREATE THE CORPSE
 $('#letsPlay').on('click', function( playClick ) {
 
+//IS CORPSE A NUMBER
     if ( $.isNumeric($('.corpse-number').val()) ) {
         $('input').removeClass('errorInput');
         corpseNumber = $('.corpse-number').val();
-        $('.inputCorpseBoxes').css('display','block');
-        $('#howDoesSection').css('display','none');
-        $('.titleOfStory').css('display','none');
-        corpseTitle = $('.corpse-title').val();
-        $('.theStoryTitle').text(corpseTitle);
-        console.log('This worked!!');    
+        $('#howDoesSection').fadeOut();
+        $('.titleOfStory').fadeOut( function() {
+            $('.inputCorpseBoxes').fadeIn();
+            corpseTitle = $('.corpse-title').val();
+            $('.theStoryTitle').text(corpseTitle).fadeIn();
+        });
     } else {
         $('input').addClass('errorInput');
         alert('Please use a number for Players!');
     }    
 });
 
-//IS CORPSE A NUMBER
-
-
 //SUBMIT THE CORPSE
 $('.submitButton').on('click', function( oneClick ) {
     oneClick.preventDefault();
+    //SETTING A CORPSE 
     if ( currentCorpse < corpseNumber ) {
-        fullStory = fullStory + " " + $('.inputStory').val();
-        getLastThree = fullStory.split(" ");
-        setLastThree = (getLastThree[getLastThree.length - 3]) + " " + (getLastThree[getLastThree.length - 2]) + " " + (getLastThree[getLastThree.length - 1]);
-        $('.theStory').text(setLastThree);
+        checkForThree = $('.inputStory').val();
+        checkForThree = checkForThree.split(" ");
+        
+        //CHECK IF THERE ARE AT LEAST THREE WORDS
+        console.log(checkForThree);
+        if (checkForThree.length < 3) {
+            alert("Please use at least three words!");
+        } else {
+            fullStory = fullStory + " " + $('.inputStory').val();
+            getLastThree = fullStory.split(" ");
+            setLastThree = (getLastThree[getLastThree.length - 3]) + " " + (getLastThree[getLastThree.length - 2]) + " " + (getLastThree[getLastThree.length - 1]);
+            $('.theStory').text(setLastThree);
+            $('.inputStory').val('');
+            currentCorpse++;
+        }
+
+    //CORPSE IS READY TO SHOW
     } else {
         fullStory = fullStory + " " + $('.inputStory').val();
         $('.paper').addClass('paperOn');
@@ -46,9 +59,8 @@ $('.submitButton').on('click', function( oneClick ) {
         $('.inputStory').css('display','none');
         $('.submitButton').css('display','none');
         $('.theStory').append('<div id="letsPlay"><a href="create.html">Play Again?</a></div>');
+        $('.inputStory').val('');
     }
-    $('.inputStory').val('');
-    currentCorpse++
 });
 
 //ABOUT PAGE
@@ -84,4 +96,56 @@ $('#gMaps').on('click', function () {
         // you want to disable pointer events when the mouse leave the canvas area;
 $(".theMap").mouseleave(function () {
     $('.theMap').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
+});
+
+//TEXT SLIDER
+
+var quoteCounter = 1;
+console.log(quoteCounter);
+
+$('.quote2').css('display', 'none');
+$('.quote3').css('display', 'none');
+
+$('.nextQuote').on('click' , function () {
+    if (quoteCounter === 1) {
+        $('.quote1').fadeOut( function () {
+            $('.quote2').fadeIn();
+        });
+        quoteCounter = 2;
+        console.log(quoteCounter);
+    } else if (quoteCounter === 2) {
+        $('.quote2').fadeOut( function () {
+            $('.quote3').fadeIn();
+        });
+        quoteCounter = 3;
+        console.log(quoteCounter);
+    } else if (quoteCounter === 3) {
+        $('.quote3').fadeOut( function () {
+            $('.quote1').fadeIn();
+        });
+        quoteCounter = 1;
+        console.log(quoteCounter);        
+    }
+});
+
+$('.prevQuote').on('click' , function () {
+    if (quoteCounter === 1) {
+        $('.quote1').fadeOut( function () {
+            $('.quote3').fadeIn();
+        });
+        quoteCounter = 3;
+        console.log(quoteCounter);
+    } else if (quoteCounter === 2) {
+        $('.quote2').fadeOut( function () {
+            $('.quote1').fadeIn();
+        });
+        quoteCounter = 1;
+        console.log(quoteCounter);
+    } else if (quoteCounter === 3) {
+        $('.quote3').fadeOut( function () {
+            $('.quote2').fadeIn();
+        });
+        quoteCounter = 2;
+        console.log(quoteCounter);
+    }
 });

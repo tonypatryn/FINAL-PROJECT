@@ -200,9 +200,9 @@ p {
 #moreStuff {
 	text-align: center;
 	margin: auto;
-	padding: 0px 40px 0px 40px;
+	padding: 0px 40px 20px 40px;
 	background-color: #1dafec;
-	height: 260px;
+	height: 300px;
 }
 
 i.fa-star {
@@ -452,6 +452,7 @@ input[type=submit]:hover {
 	font-size: 60px;
 	color: #000000;
 	text-align: center;
+	display: none;
 }
 
 .theStory {
@@ -573,6 +574,9 @@ input[type=submit]:hover {
 		float: none;
 		padding: 0px 0px 0px 40px;
 	}
+	#moreStuff {
+	min-height: 360px;
+	}
 
 }
 
@@ -584,5 +588,29 @@ input[type=submit]:hover {
 
 }
 
+.prevQuote {
+	padding: 0px 40px;
+	font-family: 'Fjalla One', Impact, sans-serif;
+	font-size: 36px;
+	text-transform: uppercase;
+	color: orange;
+	text-align: center;
+	float: left;
+    cursor: pointer;
+}
 
+.nextQuote {
+	padding: 0px 40px;
+	font-family: 'Fjalla One', Impact, sans-serif;
+	font-size: 36px;
+	text-transform: uppercase;
+	color: orange;
+	text-align: center;
+	float: right;
+	cursor: pointer;
+}
+
+.prevQuote:hover, .nextQuote:hover {
+	color: white;
+}
 
